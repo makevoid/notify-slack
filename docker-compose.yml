@@ -4,10 +4,7 @@ services:
   app:
     build:
       context: .
-    image: makevoid/app
-    ports:
-      - 3000
-      # - 3000:3000
+    image: makevoid/notify-slack
     environment:
-      - RACK_ENV=production
-      - DOCKER=1
+      - WEBHOOK
+      - MESSAGE=Test from docker compose!

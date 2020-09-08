@@ -9,3 +9,5 @@ raise "WebHookNotSetError - The WEBHOOK env. var has not been set, aborting." un
 message = ENV["MESSAGE"] || "Test message #{rand 1000}."
 
 resp = PostWebhook.(secrets, message)
+
+p resp
